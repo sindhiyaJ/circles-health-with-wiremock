@@ -1,0 +1,13 @@
+{
+  "request": {
+    "method": "POST",
+    "urlPattern": "/savepatientprescription/.*"
+  },
+  "response": {
+    "status": 201,
+    "bodyFileName": "prescriptions-response.json",
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  }
+}

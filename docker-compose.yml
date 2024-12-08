@@ -1,0 +1,11 @@
+version: "3"
+services:
+  wiremock:
+    image: "wiremock/wiremock:latest"
+    container_name: my_wiremock
+    volumes:
+      - ./circles-health/__files:/home/wiremock/__files        # WireMock response files
+      - ./circles-health/mappings:/home/wiremock/mappings      # WireMock stub mappings
+    entrypoint: ["/docker-entrypoint.sh", "--global-response-templating", "--disable-gzip", "--verbose"]
+    ports:
+      - "8080:8080"  # Exposes the WireMock server on port 8080

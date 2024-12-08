@@ -1,0 +1,15 @@
+{
+  "request": {
+    "method": "POST",
+    "urlPattern": "/savepatienthospitalvisits/.*"
+  },
+  "response": {
+    "status": 201,
+    "bodyFileName": "hospital-visits-response.json",
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  }
+}
+
+
